@@ -1,0 +1,19 @@
+version: 2
+registries:
+  vertexinc:
+    type: npm-registry
+    url: 'https://npm.pkg.github.com'
+    token: ${{ secrets.DEPENDABOT_PRIVATE_PACKAGE_TOKEN }}
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    registries:
+      - 'vertexinc'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 10
+    # Allows security updates plus minor and patch version updates.
+    # If you want major version PRs, remove this ignore block entirely.
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]

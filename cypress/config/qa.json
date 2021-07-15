@@ -1,0 +1,9 @@
+{
+  "chromeWebSecurity": false,
+  "baseUrl": "https://qa-app.vtxdev.net/ui/test",
+  "env": {
+    "authCookieName": "oidc.user:https://qaauth.vertexsmb.com/identity:cloud-platform-ui"
+  },
+  "fixturesFolder": "cypress/fixtures",
+  "numTestsKeptInMemory": 2
+}

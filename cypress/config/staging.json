@@ -1,0 +1,9 @@
+{
+  "chromeWebSecurity": false,
+  "baseUrl": "https://stage-app.vertexcloud.com/ui/test",
+  "env": {
+    "authCookieName": "oidc.user:https://stageauth.vertexsmb.com/identity:cloud-platform-ui"
+  },
+  "fixturesFolder": "cypress/fixtures",
+  "numTestsKeptInMemory": 2
+}

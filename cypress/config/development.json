@@ -1,0 +1,9 @@
+{
+  "chromeWebSecurity": false,
+  "baseUrl": "https://dev-app.vtxdev.net/ui/test",
+  "env": {
+    "authCookieName": "oidc.user:https://devauth.vertexsmb.com/identity:cloud-platform-ui"
+  },
+  "fixturesFolder": "cypress/fixtures",
+  "numTestsKeptInMemory": 2
+}
