@@ -1,0 +1,11 @@
+name: Bump Version PR Approve and Merge
+on: pull_request_target
+permissions:
+  pull-requests: write
+  contents: write
+jobs:
+  approve-and-auto-merge:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'mellis481' }}
+    steps:
+      - run: echo 'hello world'
