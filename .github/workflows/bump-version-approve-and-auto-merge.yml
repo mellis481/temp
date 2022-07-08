@@ -4,14 +4,8 @@ permissions:
   pull-requests: write
   contents: write
 jobs:
-  foo:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{ github.head_ref }}
-      - run: echo ${{ github.ref_name }}
   approve-and-auto-merge:
-    needs: foo
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'mellis481' && contains(github.ref_name, 'bump-to-') }}
+    if: ${{ github.actor == 'mellis481' && contains(github.head_ref, 'bump-to-') }}
     steps:
       - run: echo 'hello world'
