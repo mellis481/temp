@@ -6,6 +6,6 @@ permissions:
 jobs:
   approve-and-auto-merge:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'mellis481' }}
+    if: ${{ github.actor == 'mellis481' }} && contains('bump-to-', ${{ github.ref_name }})
     steps:
       - run: echo 'hello world'
