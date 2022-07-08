@@ -1,0 +1,13 @@
+name: test
+on:
+  workflow_dispatch:
+    inputs:
+      newPackageJsonVersion:
+        description: 'The semver for the version you would like to publish'
+        required: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.inputs.newPackageJsonVersion, '-beta.') }}
+    steps:
+      - run: echo 'hi'
